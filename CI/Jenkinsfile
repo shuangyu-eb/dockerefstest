@@ -1,0 +1,25 @@
+pipeline {
+   agent { label 'docker-efs-test'}
+
+   stages {
+      stage('Run Docker') {
+         steps {
+            sh 'docker info'
+         }
+      }
+
+       stage('pwd') {
+               steps {
+                   sh 'pwd'
+                }
+        }
+
+       stage('install') {
+               steps {
+                   sh 'mvn install'
+                }
+        }
+
+
+   }
+}
