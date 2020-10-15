@@ -5,6 +5,7 @@ pipeline {
       stage('Run Docker') {
          steps {
             sh 'docker info'
+            sh 'mvn -v'
          }
       }
 
@@ -14,7 +15,7 @@ pipeline {
                    sh 'mvn test'
                    sh 'mvn install'
                 }
-            }
+       }
 
 
 
