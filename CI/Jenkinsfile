@@ -11,20 +11,11 @@ pipeline {
        stage('pwd') {
                steps {
                    sh 'pwd'
-                }
-        }
-
-       stage('install') {
-                steps {
+                   sh 'mvn test'
                    sh 'mvn install'
                 }
-        }
+            }
 
-       stage('install') {
-               steps {
-                   sh 'mvn install'
-                }
-        }
 
 
    }
