@@ -6,6 +6,7 @@ pipeline {
          steps {
             sh 'docker info'
             sh 'mvn -v'
+            sh 'mvn help:effective-settings'
          }
       }
 
